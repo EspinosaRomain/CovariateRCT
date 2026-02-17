@@ -19,8 +19,7 @@ source("Functions/Functions Analyze Multivariate Exact Test.R")
 source("DGP/DGP_3.R")
 
 #Number of simulations
-#S=30000
-S=1000
+S=30000
 
 #Compute empirical MSE
 set.seed(123)

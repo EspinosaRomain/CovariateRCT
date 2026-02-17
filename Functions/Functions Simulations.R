@@ -5,7 +5,7 @@ generateDatasetMulti=function(N_funct,EStreatment_funct,EScontrol_funct,CorrMatr
   VatMatrix_funct=diag(SD_vec_funct)%*%CorrMatrix_funct%*%diag(SD_vec_funct)
   RV=cbind(c(rep(0,round(N_funct/2)),rep(1,round(N_funct/2))),sapply(1:k_funct, function(i) rnorm(N_funct)))
   RV=sapply(1:(k_funct+1), function(i) RV[,i]-mean(RV[,i]))
-  RVmod=RV%*%solve(chol(cov(RV)))%*%chol(VatMatrix_funct)
+  RVmod=RV%*%solve(chol(crossprod(RV)/N_funct))%*%chol(VatMatrix_funct)
   df_funct=data.frame(id=seq(1:N_funct))
   df_funct$treatment=RVmod[,1]
   total_controls=k_funct
