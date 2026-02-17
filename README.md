@@ -15,6 +15,8 @@ Software: R, Numbers (MacOS).
   - "5 - All Multivariate Tests.R": Reproduces Table 5
   
   - "6 - Power.R": Reproduces Table 6 and Figure 3
+
+  - "7 - Selection rules.R" : Reproduces Table 7 and Figure 4
    
 2. The Folder "DGP" contains the settings of the data-generating processes used in the simulations.
    
@@ -24,5 +26,4 @@ Software: R, Numbers (MacOS).
    
 5. The Folder "Output" will contain the graphs produced by the scripts.
 
- 
 6. The Folder "Graphs" contains the .numbers file to produce the graph of the power analysis. 
